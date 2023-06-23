@@ -29,8 +29,8 @@ for command in wire_two:
         y_2 += DY[direction]
         wire_two_length += 1
         if (x_2, y_2) not in points_two:
-            points_two[(x_2, y_2)] = wire_length
+            points_two[(x_2, y_2)] = wire_two_length
 intersections = set(points_one.keys()) & set(points_two.keys())
 print(min([abs(x) + abs(y) for (x,y) in intersections]))
-
+print(min([points_one[point] + points_two[point] for point in intersections]))
 
