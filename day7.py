@@ -63,3 +63,5 @@ result_one = []
 result_two = []
 permute(list(range(5)), list(range(5)), result_one, 0)
 print(max(sequence(text_two, permutation, False) for permutation in result_one))
+permute(list(range(5,10)), list(range(5,10)), result_two, 0)
+print(max(sequence(text_two, permutation, True) for permutation in result_two))
