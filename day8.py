@@ -12,5 +12,13 @@ while picture:
     if zeroes < low:
         low = zeroes
         answer = layer.count('1') * layer.count('2')
-
+    string = ''
+    for number_one, number_two in zip(layer, picture_grid):
+        if number_two == '2':
+            string += number_one
+        else:
+            string += number_two
+    picture_grid = string
 print(answer)
+for x in range(6):
+    print(picture_grid[x * 25: (x + 1) * 25].replace('0', ' '))
