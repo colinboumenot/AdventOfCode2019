@@ -34,4 +34,5 @@ def run(line):
     return data
 
 text = open('inputtxt/day9input.txt').readline().split(',')
-print(run(text))
+print(run(text)) #input 1
+print(run(text)) #input 2
